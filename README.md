@@ -1,45 +1,27 @@
-Python Object-Oriented Programming (OOP)
+# Python Object-Oriented Programming (OOP)
 
-This repository contains my hands-on learning and implementation of Object-Oriented Programming concepts in Python. It is aimed at building strong fundamentals through clear examples and practical code while progressing from basic to advanced OOP topics.
+This repository contains my hands-on learning and implementation of Object-Oriented Programming (OOP) concepts in Python. The goal is to build strong fundamentals by practicing core and advanced OOP principles through clear, well-structured examples.
 
-#Topics Covered
+## Topics Covered
+- Classes and Objects  
+- Class Variables  
+- Inheritance  
+- Multiple Inheritance  
+- Abstract Base Classes  
+- `super()` Method  
+- Polymorphism  
+- Duck Typing  
+- Aggregation  
+- Composition  
+- Nested Classes  
+- Static Methods  
+- Class Methods  
+- Magic (Dunder) Methods  
+- `@property` Decorator  
 
-Classes and Objects
+## Purpose
+- Strengthen Python OOP fundamentals  
+- Understand real-world object modeling  
+- Write clean, reusable, and modular code  
 
-Class Variables
-
-Inheritance
-
-Multiple Inheritance
-
-Abstract Base Classes
-
-super() Method
-
-Polymorphism
-
-Duck Typing
-
-Aggregation
-
-Composition
-
-Nested Classes
-
-Static Methods
-
-Class Methods
-
-Magic (Dunder) Methods
-
-@property Decorator
-
-Purpose
-
-Strengthen OOP fundamentals in Python
-
-Understand real-world object modeling
-
-Practice clean, reusable, and modular code
-
-📌 This repository is part of my continuous learning journey and will be updated regularly.
+📌 This repository is actively maintained as part of my learning journey.
