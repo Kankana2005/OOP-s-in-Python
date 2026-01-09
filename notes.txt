@@ -19,4 +19,13 @@ class variable : shared among all instances of a class
 #Multiple inheritance = inherit from more than one parent class
                         eg c(A,B)
 #Multilever inheritance = inherit from a parent which inherits from another parent      
-                        c(B) <- B(A)  <- a                                                         
+                        c(B) <- B(A)  <- a
+
+->Abstract class : A class that cannot be instantitated on its own; Meant to be subclassed
+                    They can contain abstract methods,which are declared but have no implementation
+                    1.Prevents instantitation of the class itself
+                    2. Requests children to use inherited abstract methods                                                      
+
+
+->super() = Fucntion  used in a child  class to call methods from a parent class (superclass)
+          Allows you to extend the functinallity of the inherited methods

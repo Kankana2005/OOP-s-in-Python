@@ -100,37 +100,120 @@
 
 
 #Multiple inheritamce and Multilevel Inheritance
-class Animal:
-    def __init__(self,name):
-        self.name = name
-    def eat(self):
-        print(f"This {self.animal} is eating")
-    def sleep(self):
-        print(f"This {self.name} is sleeping")
+# class Animal:
+#     def __init__(self,name):
+#         self.name = name
+#     def eat(self):
+#         print(f"This {self.animal} is eating")
+#     def sleep(self):
+#         print(f"This {self.name} is sleeping")
 
-class Prey(Animal):
+# class Prey(Animal):
  
-    def flee(self):
-        print(f"This {self.name} is fleeing")
-class Predator(Animal):
-    def hunt(self):
-        print(f"This {self.name} is hunting")
-class Rabbit(Prey):
-    pass
-class Hawk(Predator):
-    pass
-class Fish(Prey,Predator):
-    pass
+#     def flee(self):
+#         print(f"This {self.name} is fleeing")
+# class Predator(Animal):
+#     def hunt(self):
+#         print(f"This {self.name} is hunting")
+# class Rabbit(Prey):
+#     pass
+# class Hawk(Predator):
+#     pass
+# class Fish(Prey,Predator):
+#     pass
 
-rabbit = Rabbit("mona")
-hawk= Hawk("tony")
-fish = Fish("nimo")
+# rabbit = Rabbit("mona")
+# hawk= Hawk("tony")
+# fish = Fish("nimo")
 
-fish.hunt()
-fish.flee()
-rabbit.flee()
-rabbit.eat()
+# fish.hunt()
+# fish.flee()
+# rabbit.flee()
+# rabbit.eat()
+
+
+#Abstract class
+# from abc import ABC,abstractmethod
+
+# class Vehicle(ABC):
+#     @abstractmethod
+#     def go(self):
+#         pass
+#     @abstractmethod
+#     def stop(self):
+#         pass
+    
+# class Car(Vehicle):
+#     def go(self):
+#         print("You drive the car")
+#     def stop(self):
+#         print("You stop the car") 
         
+# class Motocycle(Vehicle):
+    
+#     def go (self):
+#         print("You ride the motorcycle")
+        
+#     def stop(self):
+#         print("You stop the motorcycle")
+
+# class Boat(Vehicle):
+#     def go (self):
+#         print("You sail the boat")
+    
+#     def stop(self):
+#         print("You anchor the boat")
+        
+# boat = Boat() 
+# boat.go()
+# boat.stop()           
+              
+              
+# super() function
+
+class Shape:
+    def __init__(self,color,is_filled):
+        self.color = color
+        self.is_filled = is_filled
+        
+    def describe(self):
+        print(f"it is {self.color} and {'filled' if self.is_filled else 'not filled'}")    
+class Circle(Shape):
+    def __init__(self,color,is_filled,radius):
+        super().__init__(color,is_filled)
+        self.radius = radius
+        
+    def describe(self):
+        super().describe()
+        print(f"Its is a circle with an area of {3.14 * self.radius*self.radius}cm^2")
+        
+            
+
+class Square(Shape):
+    def __init__(self,color,is_filled,width):
+        super().__init__(color,is_filled)
+        self.width = width
+        
+        
+    
+class Triangle(Shape):
+    def __init__(self,color,is_filled,width,height):
+        super().__init__(color,is_filled)
+        self.width = width
+        self.height = height                          
+       
+circle = Circle("red",True,5)
+square = Square("blue",False,6)
+triangle = Triangle("yesllow",True,7,8)
+print(circle.radius) 
+print(f"the radius of circle is {circle.radius}")    
+print(f"{triangle.height}")
+print(square.color)
+
+circle.describe()
+square.describe()
+triangle.describe()
+circle.describe()
          
          
                   
