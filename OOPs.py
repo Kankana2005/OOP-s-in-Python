@@ -170,50 +170,153 @@
               
               
 # super() function
+# class Shape:
+#     def __init__(self,color,is_filled):
+#         self.color = color
+#         self.is_filled = is_filled
+        
+#     def describe(self):
+#         print(f"it is {self.color} and {'filled' if self.is_filled else 'not filled'}")    
+# class Circle(Shape):
+#     def __init__(self,color,is_filled,radius):
+#         super().__init__(color,is_filled)
+#         self.radius = radius
+        
+#     def describe(self):
+#         super().describe()
+#         print(f"Its is a circle with an area of {3.14 * self.radius*self.radius}cm^2")
+        
+        
 
-class Shape:
-    def __init__(self,color,is_filled):
-        self.color = color
-        self.is_filled = is_filled
+# class Square(Shape):
+#     def __init__(self,color,is_filled,width):
+#         super().__init__(color,is_filled)
+#         self.width = width
         
-    def describe(self):
-        print(f"it is {self.color} and {'filled' if self.is_filled else 'not filled'}")    
-class Circle(Shape):
-    def __init__(self,color,is_filled,radius):
-        super().__init__(color,is_filled)
-        self.radius = radius
-        
-    def describe(self):
-        super().describe()
-        print(f"Its is a circle with an area of {3.14 * self.radius*self.radius}cm^2")
-        
-            
+       
+    
+# class Triangle(Shape):
+#     def __init__(self,color,is_filled,width,height):
+#         super().__init__(color,is_filled)
+#         self.width = width
+#         self.height = height                          
+       
+# circle = Circle("red",True,5)
+# square = Square("blue",False,6)
+# triangle = Triangle("yesllow",True,7,8)
+# print(circle.radius) 
+# print(f"the radius of circle is {circle.radius}")    
+# print(f"{triangle.height}")
+# print(square.color)
 
-class Square(Shape):
-    def __init__(self,color,is_filled,width):
-        super().__init__(color,is_filled)
-        self.width = width
+# circle.describe()
+# square.describe()
+# triangle.describe()
+# circle.describe()
+         
+
+
+
+#Polymorphism
+
+# from abc import ABC , abstractmethod
+# class Shape:
+#     def area(self):
+#         pass
         
+
+# class Circle(Shape):
+#     def __init__(self,radius):
+#         self.radius = radius
         
     
-class Triangle(Shape):
-    def __init__(self,color,is_filled,width,height):
-        super().__init__(color,is_filled)
-        self.width = width
-        self.height = height                          
-       
-circle = Circle("red",True,5)
-square = Square("blue",False,6)
-triangle = Triangle("yesllow",True,7,8)
-print(circle.radius) 
-print(f"the radius of circle is {circle.radius}")    
-print(f"{triangle.height}")
-print(square.color)
+#     def area(self):
+#       return 3.14*self.radius**2      
 
-circle.describe()
-square.describe()
-triangle.describe()
-circle.describe()
+# class Square(Shape):
+#      def __init__(self,side):
+#         self.side= side
+   
+
+#      def area(self):
+#         return self.side **2        
+
+# class Triangle(Shape):
+#      def __init__(self, base, height):
+#         self.base = base
+#         self.height = height
+#      def area(self):
+#         return self.base * self.height* 0.5 
+    
+# class Pizza(Circle):
+#     def __init__(self,topping,radius):
+#         super().__init__(radius)
+#         self.topping = topping
+             
+        
+        
+# shapes = [Circle(4),Square(5),Triangle(6,7),  Pizza("Oregano",15)]
+
+# for shape in shapes:
+#     print(f"{shape.area()}cm2")
+       
          
-         
-                  
+# Duck Typing
+
+# class Animal:
+#     alive = True  
+    
+# class Dog(Animal):
+#     def speak(self):
+#         print("Woof")
+        
+# class Cat(Animal):
+#     def speak(self):
+#         print("Meaow")
+        
+# class Car:
+#     alive = False
+#     def speak(self):
+#         print("honk")
+               
+
+# animals = [Dog(),Cat(), Car()] 
+
+# for animal in animals:
+#     animal.speak()
+#     print(animal.alive)
+
+
+#Aggregation
+
+class Library:
+    def __init__(self,name):
+        self.name = name
+        self.books = []
+        
+    def add_book(self,book):
+        self.books.append(book)  
+        
+    def list_books(self): 
+        return [f"{book.title} by {book.author}" for book in self.books]    
+
+class Book:
+    def __init__(self,title,author):
+        self.title = title
+        self.author = author
+        
+library = Library("New york times")
+book1 = Book("mili ghosh","kankana")
+book2 = Book("ABCD","eGFn")
+book3 = Book("hello","hey") 
+
+library.add_book(book1)  
+library.add_book(book2)   
+library.add_book(book3)  
+
+print(library.name)   
+
+for book in library.list_books():
+    print(book)  
+    
+                       

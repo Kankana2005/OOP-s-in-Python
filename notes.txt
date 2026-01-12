@@ -29,3 +29,22 @@ class variable : shared among all instances of a class
 
 ->super() = Fucntion  used in a child  class to call methods from a parent class (superclass)
           Allows you to extend the functinallity of the inherited methods
+
+-> Polymorphism = Greek word that means to "have many forms or faces"
+                    poly = many 
+                    morphe = forms
+
+               Two ways to Achieve Polymorphism  
+               1. Inheritance = An object could be treated of the same type as a parent class
+               2. "Duck typing" = object must have necessary attributes/methods 
+
+-> "Duck Typing" = Another way to achieve polymorphism besides inheritance
+                    object must have minimun necessa attributes/methods
+                    "if it looks like a duck and quacks like a duck , it must be a duck" 
+
+-> Aggregation = Represents a relationship where one obect(the whole) 
+               contains references to one or more Independent objects (the parts) 
+               
+                                                 
+
+
