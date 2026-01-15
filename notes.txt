@@ -45,6 +45,9 @@ class variable : shared among all instances of a class
 -> Aggregation = Represents a relationship where one obect(the whole) 
                contains references to one or more Independent objects (the parts) 
                
-                                                 
+->Composition = The composed object directly owns its componenrs , which cannot exist independently
+                    "owns-a" relAtionship  
+
+                                                                  
 
 
